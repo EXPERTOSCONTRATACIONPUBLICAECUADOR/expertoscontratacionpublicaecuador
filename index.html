@@ -472,15 +472,15 @@
         });
     </script>
 <div class="image-mosaic-js">
-  <img src="imagen1.jpg" alt="Imagen 1" class="active">
-  <img src="imagen2.jpg" alt="Imagen 2">
-  <img src="imagen3.jpg" alt="Imagen 3">
+  <img src="img/imagen1.jpg" alt="Imagen 1" class="active">
+  <img src="img/imagen2.jpg" alt="Imagen 2">
+  <img src="img/imagen3.jpg" alt="Imagen 3">
   </div>
 
 <style>
 .image-mosaic-js {
   position: relative;
-  width: 300px;
+  width: 100vw;
   height: 200px;
   overflow: hidden; /* Para que las imágenes que se mueven no se salgan del contenedor */
 }
@@ -491,7 +491,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  object-fit: cover;/* 'contain'*/ 
+opacity: 0;
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Ejemplo con más propiedades */
 }
 
@@ -539,5 +540,6 @@ mosaic.addEventListener('mouseleave', () => {
 });
 */
 </script>
+
 </body>
 </html>
