@@ -471,6 +471,73 @@
             });
         });
     </script>
+<div class="image-mosaic-js">
+  <img src="imagen1.jpg" alt="Imagen 1" class="active">
+  <img src="imagen2.jpg" alt="Imagen 2">
+  <img src="imagen3.jpg" alt="Imagen 3">
+  </div>
 
+<style>
+.image-mosaic-js {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden; /* Para que las imágenes que se mueven no se salgan del contenedor */
+}
+
+.image-mosaic-js img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Ejemplo con más propiedades */
+}
+
+.image-mosaic-js img.active {
+  opacity: 1;
+  transform: translateX(0); /* Asegura que la imagen activa esté en su posición */
+}
+
+.image-mosaic-js img.next {
+  transform: translateX(100%); /* Posiciona la siguiente imagen fuera de la vista a la derecha */
+  opacity: 1; /* Para que sea visible durante la transición */
+}
+
+.image-mosaic-js img.previous {
+  transform: translateX(-100%); /* Posiciona la imagen anterior fuera de la vista a la izquierda */
+  opacity: 1; /* Para que sea visible durante la transición */
+}
+</style>
+
+<script>
+const mosaic = document.querySelector('.image-mosaic-js');
+const images = mosaic.querySelectorAll('img');
+let currentIndex = 0;
+
+function nextImage() {
+  const current = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
+  const next = images[currentIndex];
+
+  current.classList.remove('active');
+  next.classList.add('active');
+}
+
+// Cambiar imagen cada 3 segundos (3000 milisegundos)
+setInterval(nextImage, 3000);
+
+// O puedes activar la transición con eventos como hover:
+/*
+mosaic.addEventListener('mouseenter', () => {
+  setInterval(nextImage, 1500); // Cambia más rápido al hacer hover
+});
+
+mosaic.addEventListener('mouseleave', () => {
+  // Opcional: detener el intervalo o volver a uno más lento
+});
+*/
+</script>
 </body>
 </html>
