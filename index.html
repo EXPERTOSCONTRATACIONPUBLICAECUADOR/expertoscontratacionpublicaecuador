@@ -29,6 +29,7 @@
         font-family: 'Inter', sans-serif;
       }
       .hero-bg {
+        /* Restored blue gradient background */
         background: linear-gradient(to right, #1e40af, #3b82f6);
       }
       .article-card img {
@@ -40,11 +41,11 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-        padding-left: 1.5rem; /* Indent answer */
+        padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
       .faq-answer.open {
-        max-height: 500px; /* Adjust as needed */
+        max-height: 500px;
         padding-top: 1rem;
         padding-bottom: 1rem;
         transition: max-height 0.5s ease-in, padding 0.5s ease-in;
@@ -58,11 +59,11 @@
        /* Style for lists in About section */
       #nosotros ul {
         list-style: disc;
-        margin-left: 1.5rem; /* Indent list */
-        margin-bottom: 1rem; /* Space below list */
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
       }
        #nosotros li {
-        margin-bottom: 0.25rem; /* Space between list items */
+        margin-bottom: 0.25rem;
       }
     </style>
 </head>
@@ -212,7 +213,7 @@
                         <img src="https://placehold.co/600x338/d1d5db/4b5563?text=Análisis+LOSNCP" alt="Análisis sobre la LOSNCP" class="w-full h-48 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x338/d1d5db/4b5563?text=Imagen+no+disponible';">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-gray-700 mb-3">Últimas Reformas a la LOSNCP: ¿Qué Significan?</h3>
-                            <p class="text-gray-600 mb-4 text-sm">Un breve análisis de los cambios recientes en la Ley Orgánica del Sistema Nacional de Contratación Pública y su impacto...</p>
+                            <p class="text-gray-600 mb-4 text-sm">Un breve análisis de los cambios recentes en la Ley Orgánica del Sistema Nacional de Contratación Pública y su impacto...</p>
                             <a href="#" class="text-blue-600 hover:text-blue-800 font-medium transition duration-300">Leer más <span class="lucide text-sm">&#xe900;</span></a>
                         </div>
                     </div>
@@ -422,12 +423,9 @@
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-gray-300 py-12">
-        <div class="container mx-auto px-6 text-center">
+    <footer class="bg-blue-900 text-gray-300 py-12"> <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 Consultores Ecuador - Expertos en Contratación y Gestión Pública. Todos los derechos reservados.</p>
-            <p class="mt-2 text-sm text-gray-400">Diseñado con <span class="lucide text-sm">&#xe9da;</span> en Quito, Ecuador</p> <div class="mt-4 space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white"><span class="lucide text-xl">&#xe952;</span></a> <a href="#" class="text-gray-400 hover:text-white"><span class="lucide text-xl">&#xea91;</span></a> </div>
-        </div>
+            </div>
     </footer>
 
     <script>
